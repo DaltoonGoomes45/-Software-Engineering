@@ -36,3 +36,8 @@ if __name__ == "__main__":
     criar_tarefa("Configurar Kanban")
 
     print(listar_tarefas())
+
+def resetar_dados():
+    global tasks, next_id
+    tasks = []
+    next_id = 1

@@ -8,6 +8,7 @@ from app import (
     criar_tarefa,
     listar_tarefas,
     atualizar_status,
+    atualizar_prioridade,
     remover_tarefa,
     resetar_dados
 )
@@ -52,3 +53,13 @@ def test_remover_tarefa():
 
     tarefas = listar_tarefas()
     assert len(tarefas) == 0
+
+def test_criar_tarefa_com_prioridade():
+    tarefa = criar_tarefa("Tarefa com prioridade", "Alta")
+    assert tarefa["prioridade"] == "Alta"
+
+
+def test_atualizar_prioridade():
+    tarefa = criar_tarefa("Outra tarefa", "Baixa")
+    tarefa_atualizada = atualizar_prioridade(tarefa["id"], "Média")
+    assert tarefa_atualizada["prioridade"] == "Média"

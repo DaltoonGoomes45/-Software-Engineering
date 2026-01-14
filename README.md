@@ -1,3 +1,3 @@
 # Software-Engineering
 
-chore: criar repositório e configurar kanban inicial
+Criar repositório e configurar kanban inicial
